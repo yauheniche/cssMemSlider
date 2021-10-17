@@ -73,24 +73,32 @@
  #bullets {
     position: relative;
     z-index: 100;
-    top: -4rem;
+    top: -5rem;
     margin-left: auto;
     background: black;
     width: 20rem;
  }
- #bullets label {
+ #bullets label span {
     display: inline-block;
     width: 1rem;
     height: 1rem;
     border-radius:100%;
-    background: #ccc;
-    margin: 0 1rem;
+    background: rgb(100, 194, 253);
+    transition: all .5s;
+    margin: 1rem;
  }
- #slide1:checked ~ #bullets label:nth-child(1),
- #slide2:checked ~ #bullets label:nth-child(2),
- #slide3:checked ~ #bullets label:nth-child(3),
- #slide4:checked ~ #bullets label:nth-child(4) {
-    background: #444;
+
+ #bullets label:hover  span{
+    background: rgb(255, 255, 255);
+ }
+ 
+ #slide1:checked ~ #bullets label:nth-child(1) span,
+ #slide2:checked ~ #bullets label:nth-child(2) span,
+ #slide3:checked ~ #bullets label:nth-child(3) span,
+ #slide4:checked ~ #bullets label:nth-child(4) span {
+    background: black;
+    border: 2px solid white;
+    box-sizing: border-box;
  }
  @media screen and (max-width: 950px) {
     #slide1:checked ~ #controls label:nth-child(2),
