@@ -92,7 +92,7 @@
  #slide4:checked ~ #bullets label:nth-child(4) {
     background: #444;
  }
- @media screen and (max-width: 900px) {
+ @media screen and (max-width: 950px) {
     #slide1:checked ~ #controls label:nth-child(2),
     #slide2:checked ~ #controls label:nth-child(3),
     #slide3:checked ~ #controls label:nth-child(4),
@@ -103,8 +103,22 @@
     #slide4:checked ~ #controls label:nth-last-child(1) {
        margin: 0;
     }
-    #slides {
-       max-width: calc(100% - 140px);
-       margin: 0 auto;
+    #slider {
+        width: 30rem;
+        height: 22rem;
+     }
+
+     .slide-image-container {
+        height: 15rem;
+        width: 28rem;
+    }
+
+    .slide-title {
+        margin-top: 4rem;
+    }
+
+    #bullets {
+        margin-right: auto;
+        top: -15rem;  
     }
  }
